@@ -1,0 +1,28 @@
+[user]
+	name = Fred Medlin
+	email = fmedlin@gmail.com
+[alias]
+	browse = !hub browse
+	co = checkout
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	issues = !hub browse -- issues
+	uncommit = reset --soft HEAD^
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[merge]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+[push]
+	default = upstream
+[http]
+	cookiefile = /Users/fred/.gitcookies
+[color]
+	ui = auto
