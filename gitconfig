@@ -24,3 +24,5 @@
 	cookiefile = /Users/fred/.gitcookies
 [color]
 	ui = auto
+[difftool]
+	prompt = false
