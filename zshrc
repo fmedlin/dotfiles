@@ -20,6 +20,8 @@ export ANDROID_PLATFORM_TOOLS=$ANDROID_HOME/platform-tools
 export PATH="/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=$PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$ANDROID_NDK
 
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
