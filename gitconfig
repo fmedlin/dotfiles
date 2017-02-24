@@ -4,8 +4,10 @@
 [alias]
 	browse = !hub browse
 	co = checkout
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	dev = checkout development
+	hist = log --decorate --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	issues = !hub browse -- issues
+	sla = log --oneline --decorate --graph --all -20
 	uncommit = reset --soft HEAD^
 [core]
 	excludesfile = /Users/fred/.gitignore_global
@@ -33,6 +35,6 @@
 [http]
 	cookiefile = /Users/fred/.gitcookies
 [color]
-	ui = auto
+	ui = true
 [difftool]
 	prompt = false
